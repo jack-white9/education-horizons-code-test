@@ -4,10 +4,9 @@ const Canvas = (props) => {
 
     const canvasRef = useRef(null);
 
-    const draw = ctx => {
-        ctx.fillStyle = '#000'
-        ctx.fillStyle = '#000'
-        ctx.fillRect(100, 100, 1, 1)
+    const draw = (ctx, color, x, y) => {
+        ctx.fillStyle = color
+        ctx.fillRect(x, y, 1, 1) //x, y, height, width
     }
 
 
@@ -18,7 +17,15 @@ const Canvas = (props) => {
         canvas.width = props.width
         canvas.height = props.height
         
-        draw(context)
+        for (let i = 0; i < 32768; i++) {
+            const x = i & 255;
+            const y = i / 256;
+
+            const r = (i << 3) & 0xff;
+            const g = (i >> 2) & 0xff;
+            const b = (i >> 7) & 0xff;
+            draw(context, `rgb(${r}, ${g}, ${b})`, x, y)
+        }
     }, [draw])
 
     return (

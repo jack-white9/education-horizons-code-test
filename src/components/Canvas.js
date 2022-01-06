@@ -35,11 +35,14 @@ const Canvas = (props) => {
         }
 
         // Draw all values from array of colours
-        for (let i = 0; i < 32768; i++) {
-            const x = i & 255;
-            const y = i / 256;
-            draw(context, `rgb(${colorArray[i].red}, ${colorArray[i].green}, ${colorArray[i].blue})`, x, y)
+        let i = 0
+        for (let x = 0; x < props.width; x++) {
+            for (let y = 0; y < props.height; y++) {
+                draw(context, `rgb(${colorArray[i].red}, ${colorArray[i].green}, ${colorArray[i].blue})`, x, y)
+                i++
+            }
         }
+
     })
 
 

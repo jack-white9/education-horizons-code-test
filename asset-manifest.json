@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/education-horizons-code-test/static/css/main.de707710.css",
-    "main.js": "/education-horizons-code-test/static/js/main.52378603.js",
+    "main.js": "/education-horizons-code-test/static/js/main.087e18c5.js",
     "index.html": "/education-horizons-code-test/index.html",
     "main.de707710.css.map": "/education-horizons-code-test/static/css/main.de707710.css.map",
-    "main.52378603.js.map": "/education-horizons-code-test/static/js/main.52378603.js.map"
+    "main.087e18c5.js.map": "/education-horizons-code-test/static/js/main.087e18c5.js.map"
   },
   "entrypoints": [
     "static/css/main.de707710.css",
-    "static/js/main.52378603.js"
+    "static/js/main.087e18c5.js"
   ]
 }

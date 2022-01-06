@@ -19,12 +19,12 @@ const Canvas = (props) => {
     let colorArray = [];
 
     // Generate all colours, convert from rgb to hsl, store in array
-    for (let i = 1; i < 33; i++) {
-      const red = i * 8;
-      for (let i = 1; i < 33; i++) {
-        const green = i * 8;
-        for (let i = 1; i < 33; i++) {
-          const blue = i * 8;
+    for (let i = 0; i < 32; i++) {
+      const red = (i + 1) * 8;
+      for (let i = 0; i < 32; i++) {
+        const green = (i + 1) * 8;
+        for (let i = 0; i < 32; i++) {
+          const blue = (i + 1) * 8;
           const hsl = rgbToHsl(red, green, blue);
           colorArray.push({
             h: hsl[0],

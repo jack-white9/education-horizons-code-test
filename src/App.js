@@ -4,7 +4,7 @@ import Canvas from "./components/Canvas";
 function App() {
   return (
     <main>
-      <Canvas width={256} height={128} />
+      <Canvas width={2048} height={1024} />
     </main>
   );
 }
